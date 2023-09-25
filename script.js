@@ -9,8 +9,6 @@ async function fetchNewsData(categoryId) {
         return null;
     }
 }
-
-// Function to populate news cards
 function populateNewsCards(categoryId, categoryName) {
     const container = document.getElementById('container');
     const template = document.getElementById('template-news-card');
@@ -25,15 +23,13 @@ function populateNewsCards(categoryId, categoryName) {
                     const detailsParagraph = clonedCard.querySelector('p');
                     detailsParagraph.textContent = article.details;
 
-                    // Check if article details are longer than 40 words
+                    //  40 words
                     if (article.details.split(' ').length > 40) {
-                        // Truncate the details to the first 40 words and add "Read More" link
                         const truncatedDetails = article.details.split(' ').slice(0, 40).join(' ');
                         detailsParagraph.textContent = truncatedDetails + '...';
 
-                        // Add a "Read More" link
                         const readMoreLink = document.createElement('a');
-                        readMoreLink.href = article.url; // Assuming 'article.url' contains the full article URL
+                        readMoreLink.href = article.url; 
                         readMoreLink.target = '_blank';
                         readMoreLink.textContent = 'Read More';
                         detailsParagraph.appendChild(readMoreLink);
@@ -54,8 +50,6 @@ function populateNewsCards(categoryId, categoryName) {
             console.error('Error populating news cards:', error);
         });
 }
-
-// Add event listeners to category buttons
 document.addEventListener('DOMContentLoaded', () => {
     const categoryButtons = document.querySelectorAll('.menus');
     categoryButtons.forEach((button) => {
