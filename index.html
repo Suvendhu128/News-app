@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="news">
+            <a href="#"><p class="box1">News</p></a>
+            <a href="#"><p class="box2">Media</p></a>
+        </div>
+        <div class="social">
+                <p class="intro">Follow Me</p>
+                <a href="https://github.com/Suvendhu128"><i class="fa fa-github" style="font-size:48px; color: rgb(0, 0, 0)"></i></a>
+        </div>
+        
+        <div class="blog">
+            <a href="#"><p>News</p></a>
+            <a href="#"><p>Blog</p></a>
+            <img src="profile.jpg" alt="Suvendhu patel" height="50" width="50">
+        </div>
+    </div>
+    <hr>
+</header>
+
+
+<div class="cards">
+    <div><button class="menus" onclick="populateNewsCards('01', 'Breaking news')">Breaking news</button></div>
+    <div><button class="menus" onclick="populateNewsCards('02', 'Regular news')">Regular news</button></div>
+    <div><button class="menus" onclick="populateNewsCards('03', 'International news')">International news</button></div>
+    <div><button class="menus" onclick="populateNewsCards('04', 'Sports')">Sports</button></div>
+    <div><button class="menus" onclick="populateNewsCards('05', 'Culture')">Culture</button></div>
+    <div><button class="menus" onclick="populateNewsCards('06', 'Art')">Art</button></div>
+    <div><button class="menus" onclick="populateNewsCards('07', 'All news')">All news</button></div>
+    <br>
+</div>
+<hr>
+<br>
+    <div id="container">
+        <!-- News cards will be populated here -->
+    </div>
+   
+    <template  id="template-news-card">
+        <div class="news-card">
+            <figure>
+                <img src="" class="image" height="250">
+            </figure>
+            <div>
+                <article>
+                    <h1></h1>
+                    <p></p>
+                </article>
+                <div class="end">
+                    <div>
+                    <div class="author"></div>
+                <div class="published-date"></div></div>
+                <div class="rating"></div>
+                <div class="view"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+    </template>
+    
+    <!-- <template  id="template-news-card">
+        <div class="news-card">
+            <img src="" alt="News Image" class="image" height="250">
+            <h1></h1>
+            <p></p>
+            <div class="author"></div>
+            <div class="published-date"></div>
+            <div class="rating"></div>
+            <div class="view"></div>
+            
+        
+        
+    </template> -->
+
+    <script src="script.js"> </script>
+</body>
+</html>
